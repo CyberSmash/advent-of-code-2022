@@ -54,19 +54,23 @@ def main():
 
     my_score = 0
     for elf_play, outcome in final_lines:
+
         decoded_elf_play = strategy[elf_play]
         decoded_outcome = outcome_table[outcome]
+
         if decoded_outcome == OUTCOME_DRAW:
             my_score += DRAW_POINTS + shape_score[decoded_elf_play]
+
         elif decoded_outcome == OUTCOME_LOSE:
             my_play = rules[decoded_elf_play]["beats"]
             my_score += LOSS_POINTS + shape_score[my_play]
+
         elif decoded_outcome == OUTCOME_WIN:
             my_play = rules[decoded_elf_play]["loses"]
             my_score += WIN_POINTS + shape_score[my_play]
 
     print(f"My Score {my_score}")
-
+    
 
 if __name__ == "__main__":
     main()
