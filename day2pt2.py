@@ -1,8 +1,10 @@
-import sys
+ROCK = 0
+PAPER = 1
+SCISSORS = 2
 
-strategy = {"A": "rock",
-            "B": "paper",
-            "C": "scissors",
+strategy = {"A": ROCK,
+            "B": PAPER,
+            "C": SCISSORS,
             }
 
 OUTCOME_WIN = 0
@@ -16,23 +18,23 @@ outcome_table = {
 }
 
 shape_score = {
-    "rock": 1,
-    "paper": 2,
-    "scissors": 3,
+    ROCK: 1,
+    PAPER: 2,
+    SCISSORS: 3,
 }
 
 rules = {
-    "rock": {
-        "beats": "scissors",
-        "loses": "paper",
+    ROCK: {
+        "beats": SCISSORS,
+        "loses": PAPER,
     },
-    "paper": {
-        "beats": "rock",
-        "loses": "scissors",
+    PAPER: {
+        "beats": ROCK,
+        "loses": SCISSORS,
     },
-    "scissors": {
-        "beats": "paper",
-        "loses": "rock",
+    SCISSORS: {
+        "beats": PAPER,
+        "loses": ROCK,
     }
 }
 
