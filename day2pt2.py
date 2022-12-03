@@ -70,7 +70,7 @@ def main():
             my_score += WIN_POINTS + shape_score[my_play]
 
     print(f"My Score {my_score}")
-    
+
 
 if __name__ == "__main__":
     main()
